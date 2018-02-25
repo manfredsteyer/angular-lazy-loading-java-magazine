@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="header">
+        <h1 class="title">Willkommen {{userName}}</h1>
+    </div>
+    <div class="content">
+
+        <button (click)="login()" class="btn btn-default">Login</button>
+        <button (click)="logout()" class="btn btn-default">Logout</button>
+
+    </div>
+
+  <!-- [(activeId)]="activeTab" -->
+  <!-- [activeId]="activeTab" (activeIdChange)="activeTab = $event" -->
+    <tabbed-pane [(activeId)]="activeTab" #tp>
+      <tab title="Departure" [id]="1">
+          Alle Flüge die wegfliegen.
+      </tab>
+      <tab title="Arrivals" [id]="2">
+          Alle Flüge die ankommen.
+      </tab>
+
+    </tabbed-pane>
+    {{activeTab}}, {{tp.currentTabTitle}}
+    <a (click)="tp.activate(2)">Jump to 2</a>
+</div>
+
+
