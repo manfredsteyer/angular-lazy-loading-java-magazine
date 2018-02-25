@@ -58,7 +58,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     
     RouterModule.forRoot(
       APP_ROUTES,
-      { preloadingStrategy: CustomPreloadStrategy})
+      // { preloadingStrategy: CustomPreloadStrategy}
+    )
   ],
   declarations: [
     AppComponent,

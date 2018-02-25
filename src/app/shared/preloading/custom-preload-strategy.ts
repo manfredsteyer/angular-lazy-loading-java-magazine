@@ -9,18 +9,21 @@ export class CustomPreloadStrategy implements PreloadingStrategy {
     
     preload(route: Route, fn: () => Observable<any>): Observable<any> {
         
-        /*
+        // return fn();
+
+        
         return of(true).pipe(
-            delay(5000), 
+            delay(7000), 
             switchMap(d => fn())
         );
-        */
-
+        
+        
+        /*
         if (route.data && route.data['preload']) {
             return fn();
         }
 
         return of(null);
-        
+        */
     }
 }
